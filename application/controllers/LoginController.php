@@ -5,7 +5,7 @@ class LoginController extends CI_Controller {
 	public function __construct() {
 			parent::__construct();
 			if ($this->session->userdata('level')=="1") {
-				redirect('LoginController');
+				redirect('SuController');
 			}
 			if ($this->session->userdata('level')=="2") {
 				redirect('AdminController');
@@ -13,13 +13,13 @@ class LoginController extends CI_Controller {
 			if ($this->session->userdata('level')=="3") {
 				redirect('PimpinanController');
 			}
-			else ($this->session->userdata('level')=="") {
+			elseif ($this->session->userdata('level')=="") {
 				redirect('Otentifikasi');
 			}
 			$this->load->helper('text');
 		}
-	public function index()
-	{
+
+	public function index() {
 		$this->load->view('login/login');
 	}
 }

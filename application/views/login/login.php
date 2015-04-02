@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php echo form_open("Otentifikasi/cek_login"); ?>
-    <div class="container" style="margin-top:30px">
+    <div class="container" style="margin-top:14%">
     	<div class="row">
     		<div class="col-md-4"></div>
      			<div class="col-md-4">

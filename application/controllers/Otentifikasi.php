@@ -20,6 +20,9 @@
 					$sess_data['level'] = $sess->level;
 					$this->session->set_userdata($sess_data);
 				}
+				if ($this->session->userdata('level')=='1') {
+					redirect('SuController');
+				}
 				if ($this->session->userdata('level')=='2') {
 					redirect('AdminController');
 				}

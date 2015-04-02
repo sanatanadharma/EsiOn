@@ -7,6 +7,20 @@
 			return $query;
 		}
 
-	}
+		public function admin() {
+      $query = $this->db->get_where("tb_login","level = 2");
+      return $query;
+    }
 
+		public function pimpinan() {
+      $query = $this->db->get_where("tb_login","level = 3");
+      return $query;
+    }
+
+    function add($tambah)
+    {
+        $this->db->insert('tb_login', $tambah);
+    }
+
+	}
 ?>
